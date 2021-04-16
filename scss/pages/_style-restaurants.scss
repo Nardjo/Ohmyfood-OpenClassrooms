@@ -51,7 +51,7 @@
       left: 53rem;
     }
     @include for-big-tablet{
-      left: 33rem;
+      left: 50rem;
     }
     @include for-tablet {
       left: 25rem;
@@ -74,6 +74,10 @@
     // btn order little desktop
     @include for-little-desktop {
       @include btn(-20rem, 30rem, 10rem, 3rem);
+    }
+    // btn order tablet
+    @include for-tablet {
+      @include btn(-14rem, 29rem, 10rem, 3rem);
     }
     // btn order phone
     @include for-phone {
@@ -172,10 +176,15 @@
     margin-left: 12rem;
   }
   @include for-tablet {
-    margin-left: 12rem;
+    position: relative;
+    margin-left: 0;
+    left: 6.2rem;
   }
   @include for-little-tablet {
     margin-left: 0;
+  }
+  @include for-phone {
+    left: 0;
   }
 }
 

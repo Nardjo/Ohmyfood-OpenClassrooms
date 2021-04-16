@@ -497,7 +497,7 @@ main {
 }
 @media (max-width: 1024px) {
   .restaurent__icons {
-    left: 33rem;
+    left: 50rem;
   }
 }
 @media (max-width: 768px) {
@@ -540,6 +540,26 @@ main {
     position: relative;
     left: -20rem;
     top: 30rem;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    color: #FFFFFF;
+    border: 0;
+    transition: transform 0.2s;
+  }
+  .restaurent__order:hover {
+    transform: scale(1.01);
+  }
+}
+@media (max-width: 768px) {
+  .restaurent__order {
+    position: relative;
+    left: -14rem;
+    top: 29rem;
     width: 10rem;
     height: 3rem;
     border-radius: 3rem;
@@ -691,12 +711,19 @@ main {
 }
 @media (max-width: 768px) {
   .restaurent__dessert {
-    margin-left: 12rem;
+    position: relative;
+    margin-left: 0;
+    left: 6.2rem;
   }
 }
 @media (max-width: 600px) {
   .restaurent__dessert {
     margin-left: 0;
+  }
+}
+@media (max-width: 599px) {
+  .restaurent__dessert {
+    left: 0;
   }
 }
 

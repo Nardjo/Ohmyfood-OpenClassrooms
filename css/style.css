@@ -222,9 +222,10 @@ main {
   .mod-operator__list {
     display: flex;
     flex-flow: column wrap;
+    left: 0;
   }
 }
-@media (max-width: 599px) {
+@media (max-width: 375px) {
   .mod-operator__list {
     left: -0.5rem;
   }
@@ -335,9 +336,9 @@ main {
   width: 40rem;
   height: 15rem;
   border-radius: 1.5rem 1.5rem 0 0;
-  position: relative;
-  left: -2.5rem;
-  top: -1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 @media (max-width: 599px) {
   .restaurants__content figure img {
@@ -347,7 +348,7 @@ main {
 }
 .restaurants__content figure figcaption {
   position: relative;
-  top: -0.5rem;
+  top: 10rem;
   left: -1rem;
   font-weight: bolder;
   font-size: 1.4rem;
@@ -382,7 +383,7 @@ main {
 }
 .restaurants p {
   position: relative;
-  top: -1rem;
+  top: 9.5rem;
   left: 1rem;
   font-size: 1.1rem;
 }
@@ -399,7 +400,7 @@ main {
 }
 .restaurants i {
   position: relative;
-  top: -5rem;
+  top: 5.5rem;
   left: 35rem;
 }
 @media (max-width: 1200px) {

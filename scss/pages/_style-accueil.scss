@@ -1,5 +1,5 @@
 main {
-  margin: 0 0 0 auto;
+  margin: 0;
 }
 
 // ---------  explore ------------
@@ -103,7 +103,7 @@ main {
         padding-right: 2rem;
       }
       @include for-little-phone {
-        margin-left: -0.5rem;
+        margin-left: 0;
       }
 
       &__number {

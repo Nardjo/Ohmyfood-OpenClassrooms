@@ -111,6 +111,9 @@ a {
 .footer__list li i {
   margin-right: 0.3rem;
 }
+.footer__list li a {
+  color: #FFFFFF;
+}
 
 .footer-menu {
   position: relative;
@@ -123,7 +126,7 @@ a {
 }
 
 main {
-  margin: 0 0 0 auto;
+  margin: 0;
 }
 
 .explore {
@@ -253,7 +256,7 @@ main {
 }
 @media (max-width: 375px) {
   .mod-operator__list__item {
-    margin-left: -0.5rem;
+    margin-left: 0;
   }
 }
 .mod-operator__list__item__number {

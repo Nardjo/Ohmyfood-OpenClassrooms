@@ -184,10 +184,13 @@ main {
       width: 40rem;
       height: 15rem;
       border-radius: 1.5rem 1.5rem 0 0;
-      position: absolute;
-      left: 0;
-      top: 0;
+      position: relative;
+      left: -2.5rem;
+      top: -1rem;
       @include for-phone {
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 22rem;
         height: 10rem;
       }
@@ -195,11 +198,12 @@ main {
 
     & figcaption {
       position: relative;
-      top: 10rem;
+      top: 0;
       left: -1rem;
       font-weight: bolder;
       font-size: 1.4rem;
       @include for-phone {
+        top: 10rem;
         left: -2rem;
       }
     }
@@ -220,7 +224,7 @@ main {
 
       & p {
         position: relative;
-        left: 0.8rem;
+        left: 0.6rem;
         top: -0.6rem;
       }
     }
@@ -228,14 +232,20 @@ main {
 
   & p {
     position: relative;
-    top: 9.5rem;
-    left: 1rem;
+    top: -1rem;
+    left: 1.5rem;
     font-size: 1.1rem;
     @include for-little-desktop {
       font-size: 1rem;
+      top: 9.2rem;
       left: 1.5rem;
     }
+    @include for-big-tablet{
+      position: absolute;
+      top: 17rem;
+    }
     @include for-phone {
+      top: 11.8rem;
       left: 0.5rem;
     }
 
@@ -243,8 +253,8 @@ main {
 
   & i {
     position: relative;
-    top: 5.5rem;
-    left: 35rem;
+    top: -5rem;
+    left: 36rem;
     @include for-little-desktop {
       width: 1.5rem;
       height: 1.5rem;
@@ -252,8 +262,10 @@ main {
     }
     @include for-big-tablet{
       left: 37rem;
+      top: -2.5rem;
     }
     @include for-phone {
+      top: 8rem;
       left: 19rem;
     }
   }

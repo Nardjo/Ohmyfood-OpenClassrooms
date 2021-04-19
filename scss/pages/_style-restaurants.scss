@@ -42,19 +42,18 @@
     }
   }
 
-  &__icons {
+  & .like {
     position: relative;
     top: 1.5rem;
-    left: 75rem;
     left: 75rem;
     @include for-little-desktop {
       left: 53rem;
     }
-    @include for-big-tablet{
+    @include for-big-tablet {
       left: 50rem;
     }
     @include for-tablet {
-      left: 25rem;
+      left: 30rem;
     }
     @include for-phone {
       max-width: 2rem;
@@ -62,6 +61,15 @@
       left: 10rem;
       margin: 0;
     }
+    @include for-little-phone {
+      left: 8rem;
+    }
+
+    & .fa-heart {
+      position: absolute;
+      cursor: pointer
+    }
+    @include like;
   }
 
   &__menu {
@@ -99,8 +107,8 @@
   width: 23rem;
   height: 5rem;
   top: 4rem;
-  left: -2rem;
-  @include for-big-tablet{
+  left: 0;
+  @include for-big-tablet {
     margin-bottom: 1.5rem;
   }
   @include for-phone {
@@ -143,7 +151,7 @@
 .menu-type {
   position: relative;
   top: 4rem;
-  left: -0.7rem;
+  left: 2rem;
   font-weight: lighter;
 
   &::after {
@@ -155,16 +163,22 @@
     left: 0;
     top: 2rem;
   }
+
   @include for-phone {
-    margin: 3rem 0 1rem 1rem;
+    margin: 4rem 0 1rem 1rem;
     top: 0;
-    left: 0;
+    left: 1rem;
   }
 }
 
+.restaurent_starter {
+ @include animItemApproach(1s);
+}
+
 .restaurent__main-course {
-  @include for-big-tablet{
-    margin-left: 2rem;
+  @include animItemApproach(1.5s);
+
+  @include for-big-tablet {
   }
   @include for-phone {
     margin-left: 0;
@@ -172,13 +186,15 @@
 }
 
 .restaurent__dessert {
+  @include animItemApproach(2s);
+
   @include for-little-desktop {
     margin-left: 12rem;
   }
   @include for-tablet {
     position: relative;
     margin-left: 0;
-    left: 6.2rem;
+    left: 5rem;
   }
   @include for-little-tablet {
     margin-left: 0;

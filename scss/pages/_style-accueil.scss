@@ -1,6 +1,7 @@
 main {
   margin: 0;
 }
+
 // ---------  explore ------------
 .explore {
   text-align: center;
@@ -39,7 +40,6 @@ main {
 
   &__btn {
     @include btn(0, 0, 20rem, 4rem);
-
   }
 }
 
@@ -56,6 +56,7 @@ main {
     justify-content: center;
     margin: 0;
     position: relative;
+
     @include for-phone {
       margin-bottom: 1rem;
     }
@@ -66,11 +67,12 @@ main {
     flex-flow: row nowrap;
     justify-content: center;
     position: relative;
+
     @include for-little-desktop {
       display: flex;
       flex-flow: row wrap;
     }
-    @include for-big-tablet{
+    @include for-big-tablet {
       left: 2rem;
     }
     @include for-phone {
@@ -94,6 +96,16 @@ main {
       border-radius: 1rem;
       background-color: $bg-color-primary;
       box-shadow: $box-shadow;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($color-primary, 30%);
+        opacity: 90%;
+        & .mod-operator__list__item__icons {
+          color: $color-primary;
+        }
+      }
+
       @include for-little-desktop {
         margin-bottom: 1rem;
       }
@@ -118,6 +130,7 @@ main {
         height: 2rem;
         position: relative;
         left: -4rem;
+
         @include for-phone {
           left: -3rem;
         }
@@ -127,6 +140,8 @@ main {
         position: relative;
         top: 0;
         left: -2.5rem;
+        color: #7e7e7e;
+
         @include for-little-phone {
           display: flex;
           align-items: center;
@@ -157,6 +172,7 @@ main {
     margin-left: auto;
     justify-content: center;
     padding-top: 2rem;
+
     @include for-phone {
       margin: 0 0 1rem 1rem;
     }
@@ -170,10 +186,15 @@ main {
     border-radius: 1.5rem;
     box-shadow: $box-shadow;
     position: relative;
+
     @include for-phone {
       width: 22rem;
       height: 15rem;
       left: 0;
+    }
+
+    @include for-little-little-phone {
+      left: -0.25rem;
     }
   }
 
@@ -186,6 +207,7 @@ main {
       position: relative;
       left: -2.5rem;
       top: -1rem;
+
       @include for-phone {
         position: absolute;
         left: 0;
@@ -201,6 +223,7 @@ main {
       left: -1rem;
       font-weight: bolder;
       font-size: 1.4rem;
+
       @include for-phone {
         top: 10rem;
         left: -2rem;
@@ -214,6 +237,7 @@ main {
       width: 5.5rem;
       height: 2rem;
       background-color: $color-tertiary;
+
       @include for-phone {
         left: -14rem;
       }
@@ -239,7 +263,7 @@ main {
       top: 9.2rem;
       left: 1.5rem;
     }
-    @include for-big-tablet{
+    @include for-big-tablet {
       position: absolute;
       top: 17rem;
     }
@@ -250,22 +274,30 @@ main {
 
   }
 
-  & i {
-    position: relative;
-    top: -5rem;
+  .fa-heart {
+    position: absolute;
+    top: 16.5rem;
     left: 36rem;
     @include for-little-desktop {
       width: 1.5rem;
       height: 1.5rem;
       left: 17rem;
     }
-    @include for-big-tablet{
+    @include for-big-tablet {
       left: 37rem;
-      top: -2.5rem;
+      top: 16.5rem;
     }
     @include for-phone {
-      top: 8rem;
+      top: 11.5rem;
       left: 19rem;
     }
   }
+
+ .like {
+   @include like;
+ }
 }
+
+
+
+

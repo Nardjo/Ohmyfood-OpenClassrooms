@@ -1,4 +1,4 @@
-@mixin btn ($left, $top, $width, $height) {
+@mixin btn($left, $top, $width, $height) {
   position: relative;
   left: $left;
   top: $top;
@@ -8,36 +8,83 @@
   font-size: 1.2rem;
   cursor: pointer;
   box-shadow: $box-shadow;
-  background: linear-gradient(0deg, $color-primary, $color-secondary);
+  background-color: #686868;
+  background-image: $color-gradient;
   color: #FFFFFF;
   border: 0;
-  transition: transform .2s;
-
+  transition-duration: 300ms;
   &:hover {
-    transform: scale(1.01);
+      opacity: 85%;
+      box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+    }
+  }
+
+@mixin like {
+    &__bg {
+      opacity: 0;
+      width: 3rem;
+      height: 3rem;
+      background: -webkit-linear-gradient($color-primary, $color-secondary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition-duration: 500ms;
+    }
+    &:hover {
+      .like__bg {
+        opacity: 1;
+      }
+      .like__no-bg{
+        opacity: 0;
+        transition-duration: 500ms;
+      }
+    }
+  }
+
+@mixin animItemApproach ($animation-delay){
+  animation: itemApproach 2s;
+  animation-delay: $animation-delay;
+  animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+  animation-fill-mode: both;
+}
+
+@mixin for-little-little-phone {
+  @media (max-width: 360px) {
+    @content;
   }
 }
 
 @mixin for-little-phone {
-  @media (max-width: 375px) { @content; }
+  @media (max-width: 375px) {
+    @content;
+  }
 }
 
 @mixin for-phone {
-  @media (max-width: 599px) { @content; }
+  @media (max-width: 599px) {
+    @content;
+  }
 }
 
 @mixin for-little-tablet {
-  @media (max-width: 600px) { @content; }
+  @media (max-width: 600px) {
+    @content;
+  }
 }
 
 @mixin for-tablet {
-  @media (max-width: 768px) { @content; }
+  @media (max-width: 768px) {
+    @content;
+  }
 }
 
 @mixin for-big-tablet {
-  @media (max-width: 1024px) { @content; }
+  @media (max-width: 1024px) {
+    @content;
+  }
 }
 
-@mixin for-little-desktop  {
-  @media (max-width: 1200px) { @content; }
+@mixin for-little-desktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
 }

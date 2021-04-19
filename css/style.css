@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@keyframes itemApproach {
+  0% {
+    transform: translateY(-3rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 100%;
+  }
+}
 html, body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -174,13 +184,15 @@ main {
   font-size: 1.2rem;
   cursor: pointer;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-color: #686868;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   color: #FFFFFF;
   border: 0;
-  transition: transform 0.2s;
+  transition-duration: 300ms;
 }
 .explore__btn:hover {
-  transform: scale(1.01);
+  opacity: 85%;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
 .mod-operator {
@@ -242,6 +254,14 @@ main {
   border-radius: 1rem;
   background-color: #f3f3f3;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+}
+.mod-operator__list__item:hover {
+  background-color: #e4d5f6;
+  opacity: 90%;
+}
+.mod-operator__list__item:hover .mod-operator__list__item__icons {
+  color: #9356DC;
 }
 @media (max-width: 1200px) {
   .mod-operator__list__item {
@@ -282,6 +302,7 @@ main {
   position: relative;
   top: 0;
   left: -2.5rem;
+  color: #7e7e7e;
 }
 @media (max-width: 375px) {
   .mod-operator__list__item__icons {
@@ -329,6 +350,11 @@ main {
     width: 22rem;
     height: 15rem;
     left: 0;
+  }
+}
+@media (max-width: 360px) {
+  .restaurants__content {
+    left: -0.25rem;
   }
 }
 .restaurants__content figure img {
@@ -410,29 +436,45 @@ main {
     left: 0.5rem;
   }
 }
-.restaurants i {
-  position: relative;
-  top: -5rem;
+.restaurants .fa-heart {
+  position: absolute;
+  top: 16.5rem;
   left: 36rem;
 }
 @media (max-width: 1200px) {
-  .restaurants i {
+  .restaurants .fa-heart {
     width: 1.5rem;
     height: 1.5rem;
     left: 17rem;
   }
 }
 @media (max-width: 1024px) {
-  .restaurants i {
+  .restaurants .fa-heart {
     left: 37rem;
-    top: -2.5rem;
+    top: 16.5rem;
   }
 }
 @media (max-width: 599px) {
-  .restaurants i {
-    top: 8rem;
+  .restaurants .fa-heart {
+    top: 11.5rem;
     left: 19rem;
   }
+}
+.restaurants .like__bg {
+  opacity: 0;
+  width: 3rem;
+  height: 3rem;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-duration: 500ms;
+}
+.restaurants .like:hover .like__bg {
+  opacity: 1;
+}
+.restaurants .like:hover .like__no-bg {
+  opacity: 0;
+  transition-duration: 500ms;
 }
 
 .restaurent {
@@ -484,34 +526,58 @@ main {
     font-size: 1.4rem;
   }
 }
-.restaurent__icons {
+.restaurent .like {
   position: relative;
   top: 1.5rem;
   left: 75rem;
-  left: 75rem;
 }
 @media (max-width: 1200px) {
-  .restaurent__icons {
+  .restaurent .like {
     left: 53rem;
   }
 }
 @media (max-width: 1024px) {
-  .restaurent__icons {
+  .restaurent .like {
     left: 50rem;
   }
 }
 @media (max-width: 768px) {
-  .restaurent__icons {
-    left: 25rem;
+  .restaurent .like {
+    left: 30rem;
   }
 }
 @media (max-width: 599px) {
-  .restaurent__icons {
+  .restaurent .like {
     max-width: 2rem;
     top: 1rem;
     left: 10rem;
     margin: 0;
   }
+}
+@media (max-width: 375px) {
+  .restaurent .like {
+    left: 8rem;
+  }
+}
+.restaurent .like .fa-heart {
+  position: absolute;
+  cursor: pointer;
+}
+.restaurent .like__bg {
+  opacity: 0;
+  width: 3rem;
+  height: 3rem;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-duration: 500ms;
+}
+.restaurent .like:hover .like__bg {
+  opacity: 1;
+}
+.restaurent .like:hover .like__no-bg {
+  opacity: 0;
+  transition-duration: 500ms;
 }
 .restaurent__menu {
   display: flex;
@@ -527,13 +593,15 @@ main {
   font-size: 1.2rem;
   cursor: pointer;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-color: #686868;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   color: #FFFFFF;
   border: 0;
-  transition: transform 0.2s;
+  transition-duration: 300ms;
 }
 .restaurent__order:hover {
-  transform: scale(1.01);
+  opacity: 85%;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 1200px) {
   .restaurent__order {
@@ -546,13 +614,15 @@ main {
     font-size: 1.2rem;
     cursor: pointer;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
-    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    background-color: #686868;
+    background-image: linear-gradient(0deg, #9356DC, #FF79DA);
     color: #FFFFFF;
     border: 0;
-    transition: transform 0.2s;
+    transition-duration: 300ms;
   }
   .restaurent__order:hover {
-    transform: scale(1.01);
+    opacity: 85%;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   }
 }
 @media (max-width: 768px) {
@@ -566,13 +636,15 @@ main {
     font-size: 1.2rem;
     cursor: pointer;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
-    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    background-color: #686868;
+    background-image: linear-gradient(0deg, #9356DC, #FF79DA);
     color: #FFFFFF;
     border: 0;
-    transition: transform 0.2s;
+    transition-duration: 300ms;
   }
   .restaurent__order:hover {
-    transform: scale(1.01);
+    opacity: 85%;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   }
 }
 @media (max-width: 599px) {
@@ -586,13 +658,15 @@ main {
     font-size: 1.2rem;
     cursor: pointer;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
-    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    background-color: #686868;
+    background-image: linear-gradient(0deg, #9356DC, #FF79DA);
     color: #FFFFFF;
     border: 0;
-    transition: transform 0.2s;
+    transition-duration: 300ms;
   }
   .restaurent__order:hover {
-    transform: scale(1.01);
+    opacity: 85%;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   }
 }
 @media (max-width: 375px) {
@@ -606,13 +680,15 @@ main {
     font-size: 1.2rem;
     cursor: pointer;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
-    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    background-color: #686868;
+    background-image: linear-gradient(0deg, #9356DC, #FF79DA);
     color: #FFFFFF;
     border: 0;
-    transition: transform 0.2s;
+    transition-duration: 300ms;
   }
   .restaurent__order:hover {
-    transform: scale(1.01);
+    opacity: 85%;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -625,7 +701,7 @@ main {
   width: 23rem;
   height: 5rem;
   top: 4rem;
-  left: -2rem;
+  left: 0;
 }
 @media (max-width: 1024px) {
   .menu-card {
@@ -673,7 +749,7 @@ main {
 .menu-type {
   position: relative;
   top: 4rem;
-  left: -0.7rem;
+  left: 2rem;
   font-weight: lighter;
 }
 .menu-type::after {
@@ -687,16 +763,24 @@ main {
 }
 @media (max-width: 599px) {
   .menu-type {
-    margin: 3rem 0 1rem 1rem;
+    margin: 4rem 0 1rem 1rem;
     top: 0;
-    left: 0;
+    left: 1rem;
   }
 }
 
-@media (max-width: 1024px) {
-  .restaurent__main-course {
-    margin-left: 2rem;
-  }
+.restaurent_starter {
+  animation: itemApproach 2s;
+  animation-delay: 1s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+
+.restaurent__main-course {
+  animation: itemApproach 2s;
+  animation-delay: 1.5s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
 }
 @media (max-width: 599px) {
   .restaurent__main-course {
@@ -704,6 +788,12 @@ main {
   }
 }
 
+.restaurent__dessert {
+  animation: itemApproach 2s;
+  animation-delay: 2s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
 @media (max-width: 1200px) {
   .restaurent__dessert {
     margin-left: 12rem;
@@ -713,7 +803,7 @@ main {
   .restaurent__dessert {
     position: relative;
     margin-left: 0;
-    left: 6.2rem;
+    left: 5rem;
   }
 }
 @media (max-width: 600px) {

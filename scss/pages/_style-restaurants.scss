@@ -43,9 +43,11 @@
   }
 
   & .like {
-    position: relative;
+    position: absolute;
     top: 1.5rem;
     left: 75rem;
+    cursor: pointer;
+    z-index: 1;
     @include for-little-desktop {
       left: 53rem;
     }
@@ -67,14 +69,9 @@
 
     & .fa-heart {
       position: absolute;
-      cursor: pointer
     }
-    @include like;
-  }
 
-  &__menu {
-    display: flex;
-    flex-flow: row nowrap;
+    @include like;
   }
 
   &__order {
@@ -95,56 +92,6 @@
     @include for-little-phone {
       @include btn(0, 2rem, 10rem, 3rem);
     }
-  }
-}
-
-.menu-card {
-  position: relative;
-  background-color: #FFFFFF;
-  box-shadow: $box-shadow;
-  margin: 1rem 1.5rem 0 2rem;
-  border-radius: 1rem;
-  width: 23rem;
-  height: 5rem;
-  top: 4rem;
-  left: 0;
-  @include for-big-tablet {
-    margin-bottom: 1.5rem;
-  }
-  @include for-phone {
-    width: 23rem;
-    left: 0.5rem;
-    top: 0;
-  }
-  @include for-little-phone {
-    width: 21rem;
-    left: 0;
-  }
-
-
-  & h3 {
-    position: relative;
-    top: 1rem;
-    left: 1rem;
-  }
-
-  & p {
-    position: relative;
-    top: 0.3rem;
-    left: 1rem;
-    font-weight: lighter;
-    @include for-phone {
-      font-size: 0.9rem;
-    }
-  }
-
-  & div {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: relative;
-    top: -2rem;
-    left: -1rem;
   }
 }
 
@@ -171,8 +118,115 @@
   }
 }
 
-.restaurent_starter {
- @include animItemApproach(1s);
+.menu-card {
+  position: relative;
+  background-color: #FFFFFF;
+  box-shadow: $box-shadow;
+  margin: 1rem 1.5rem 0 2rem;
+  border-radius: 1rem;
+  width: 23rem;
+  height: 5rem;
+  top: 4rem;
+  left: 0;
+  overflow: hidden;
+  cursor: pointer;
+  @include for-big-tablet {
+    margin-bottom: 1.5rem;
+  }
+  @include for-phone {
+    width: 23rem;
+    left: 0.5rem;
+    top: 0;
+  }
+  @include for-little-phone {
+    width: 21rem;
+    left: 0;
+  }
+
+
+  & h3 {
+    position: relative;
+    top: 0;
+    left: 1rem;
+    width: 20rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  & p {
+    position: relative;
+    top: -0.8rem;
+    left: 1rem;
+    font-weight: lighter;
+    width: 20rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @include for-phone {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    top: -2.8rem;
+    left: -1rem;
+  }
+
+  &__confirm-icons {
+    background-color: $color-tertiary;
+    margin: -6.95rem -5rem -1rem 23rem;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    border-radius : 0 1rem 1rem 0;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+    &__icons {
+      height: 2rem;
+      width: 2rem;
+      background-color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      transform: rotate(180deg);
+      transition-duration: 0.5s;
+    }
+    & .fa-check{
+      color: $color-tertiary;
+    }
+  }
+
+  &:hover {
+    & .menu-card__confirm-icons {
+      transform: translateX(-4.5rem);
+      transition-duration: 0.5s;
+      &__icons {
+        transform: rotate(360deg);
+      }
+    }
+    & .menu-card__price {
+      transform: translateX(-3.8rem);
+      transition-duration: 0.5s;
+    }
+    & h3 {
+      width: 16rem;
+    }
+    & p {
+      width: 14rem;
+    }
+  }
+}
+
+.restaurent__starter {
+  @include animItemApproach(1s);
 }
 
 .restaurent__main-course {

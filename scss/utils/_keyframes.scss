@@ -1,10 +1,10 @@
 @keyframes itemApproach {
   0% {
-    transform: translateY(-3rem);
+    transform: translateY(-2rem);
     opacity: 0;
   }
   100% {
-    transform: translateY(0rem);
+    transform: translateY(0);
     opacity: 100%;
   }
 }

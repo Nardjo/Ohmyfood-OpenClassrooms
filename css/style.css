@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @keyframes itemApproach {
   0% {
-    transform: translateY(-3rem);
+    transform: translateY(-2rem);
     opacity: 0;
   }
   100% {
-    transform: translateY(0rem);
+    transform: translateY(0);
     opacity: 100%;
   }
 }
@@ -527,9 +527,11 @@ main {
   }
 }
 .restaurent .like {
-  position: relative;
+  position: absolute;
   top: 1.5rem;
   left: 75rem;
+  cursor: pointer;
+  z-index: 1;
 }
 @media (max-width: 1200px) {
   .restaurent .like {
@@ -561,7 +563,6 @@ main {
 }
 .restaurent .like .fa-heart {
   position: absolute;
-  cursor: pointer;
 }
 .restaurent .like__bg {
   opacity: 0;
@@ -578,10 +579,6 @@ main {
 .restaurent .like:hover .like__no-bg {
   opacity: 0;
   transition-duration: 500ms;
-}
-.restaurent__menu {
-  display: flex;
-  flex-flow: row nowrap;
 }
 .restaurent__order {
   position: relative;
@@ -692,60 +689,6 @@ main {
   }
 }
 
-.menu-card {
-  position: relative;
-  background-color: #FFFFFF;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
-  margin: 1rem 1.5rem 0 2rem;
-  border-radius: 1rem;
-  width: 23rem;
-  height: 5rem;
-  top: 4rem;
-  left: 0;
-}
-@media (max-width: 1024px) {
-  .menu-card {
-    margin-bottom: 1.5rem;
-  }
-}
-@media (max-width: 599px) {
-  .menu-card {
-    width: 23rem;
-    left: 0.5rem;
-    top: 0;
-  }
-}
-@media (max-width: 375px) {
-  .menu-card {
-    width: 21rem;
-    left: 0;
-  }
-}
-.menu-card h3 {
-  position: relative;
-  top: 1rem;
-  left: 1rem;
-}
-.menu-card p {
-  position: relative;
-  top: 0.3rem;
-  left: 1rem;
-  font-weight: lighter;
-}
-@media (max-width: 599px) {
-  .menu-card p {
-    font-size: 0.9rem;
-  }
-}
-.menu-card div {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: relative;
-  top: -2rem;
-  left: -1rem;
-}
-
 .menu-type {
   position: relative;
   top: 4rem;
@@ -769,7 +712,113 @@ main {
   }
 }
 
-.restaurent_starter {
+.menu-card {
+  position: relative;
+  background-color: #FFFFFF;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+  margin: 1rem 1.5rem 0 2rem;
+  border-radius: 1rem;
+  width: 23rem;
+  height: 5rem;
+  top: 4rem;
+  left: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .menu-card {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 599px) {
+  .menu-card {
+    width: 23rem;
+    left: 0.5rem;
+    top: 0;
+  }
+}
+@media (max-width: 375px) {
+  .menu-card {
+    width: 21rem;
+    left: 0;
+  }
+}
+.menu-card h3 {
+  position: relative;
+  top: 0;
+  left: 1rem;
+  width: 20rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-card p {
+  position: relative;
+  top: -0.8rem;
+  left: 1rem;
+  font-weight: lighter;
+  width: 20rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (max-width: 599px) {
+  .menu-card p {
+    font-size: 0.9rem;
+  }
+}
+.menu-card__price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  top: -2.8rem;
+  left: -1rem;
+}
+.menu-card__confirm-icons {
+  background-color: #99E2D0;
+  margin: -6.95rem -5rem -1rem 23rem;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  border-radius: 0 1rem 1rem 0;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.menu-card__confirm-icons__icons {
+  height: 2rem;
+  width: 2rem;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.menu-card__confirm-icons .fa-check {
+  color: #99E2D0;
+}
+.menu-card:hover .menu-card__confirm-icons {
+  transform: translateX(-4.5rem);
+  transition-duration: 0.5s;
+}
+.menu-card:hover .menu-card__confirm-icons__icons {
+  transform: rotate(360deg);
+}
+.menu-card:hover .menu-card__price {
+  transform: translateX(-3.8rem);
+  transition-duration: 0.5s;
+}
+.menu-card:hover h3 {
+  width: 16rem;
+}
+.menu-card:hover p {
+  width: 14rem;
+}
+
+.restaurent__starter {
   animation: itemApproach 2s;
   animation-delay: 1s;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);

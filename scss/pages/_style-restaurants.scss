@@ -45,26 +45,25 @@
   & .like {
     position: absolute;
     top: 1.5rem;
-    left: 75rem;
+    margin-left: 95%;
     cursor: pointer;
     z-index: 1;
     @include for-little-desktop {
-      left: 53rem;
+      margin-left: 80%;
     }
     @include for-big-tablet {
-      left: 50rem;
+      margin-left: 80%;
     }
     @include for-tablet {
-      left: 30rem;
+      margin-left: 75%;
     }
     @include for-phone {
       max-width: 2rem;
       top: 1rem;
-      left: 10rem;
-      margin: 0;
+      left: 3.5rem;
     }
     @include for-little-phone {
-      left: 8rem;
+      left: 2.5rem;
     }
 
     & .fa-heart {
@@ -125,7 +124,7 @@
   margin: 1rem 1.5rem 0 2rem;
   border-radius: 1rem;
   width: 23rem;
-  height: 5rem;
+  height: 4.8rem;
   top: 4rem;
   left: 0;
   overflow: hidden;
@@ -135,7 +134,7 @@
   }
   @include for-phone {
     width: 23rem;
-    left: 0.5rem;
+    left: 0;
     top: 0;
   }
   @include for-little-phone {
@@ -176,18 +175,25 @@
     position: relative;
     top: -2.8rem;
     left: -1rem;
+    transition-duration: 1s;
+    animation-timing-function: ease-in-out;
   }
 
   &__confirm-icons {
     background-color: $color-tertiary;
-    margin: -6.95rem -5rem -1rem 23rem;
-    width: 5rem;
+    position: relative;
+    top: -7.1rem;
+    left: 23rem;
+    width: 6rem;
     height: 5rem;
     display: flex;
     border-radius : 0 1rem 1rem 0;
     align-items: center;
     justify-content: center;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
+    @include for-big-tablet {
+      top: -7.2rem;
+    }
     &__icons {
       height: 2rem;
       width: 2rem;
@@ -195,9 +201,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-right: 1.5rem;
       border-radius: 100px;
       transform: rotate(180deg);
-      transition-duration: 0.5s;
+      transition-duration: 1s;
     }
     & .fa-check{
       color: $color-tertiary;
@@ -207,20 +214,27 @@
   &:hover {
     & .menu-card__confirm-icons {
       transform: translateX(-4.5rem);
-      transition-duration: 0.5s;
+      @include for-little-phone {
+        transform: translateX(-6.5rem);
+      }
       &__icons {
         transform: rotate(360deg);
       }
     }
     & .menu-card__price {
-      transform: translateX(-3.8rem);
-      transition-duration: 0.5s;
+      left: -5rem;
     }
     & h3 {
       width: 16rem;
+      @include for-little-phone {
+        width: 13rem;
+      }
     }
     & p {
       width: 14rem;
+      @include for-little-phone {
+        width: 12rem;
+      }
     }
   }
 }

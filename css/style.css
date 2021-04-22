@@ -529,36 +529,35 @@ main {
 .restaurent .like {
   position: absolute;
   top: 1.5rem;
-  left: 75rem;
+  margin-left: 95%;
   cursor: pointer;
   z-index: 1;
 }
 @media (max-width: 1200px) {
   .restaurent .like {
-    left: 53rem;
+    margin-left: 80%;
   }
 }
 @media (max-width: 1024px) {
   .restaurent .like {
-    left: 50rem;
+    margin-left: 80%;
   }
 }
 @media (max-width: 768px) {
   .restaurent .like {
-    left: 30rem;
+    margin-left: 75%;
   }
 }
 @media (max-width: 599px) {
   .restaurent .like {
     max-width: 2rem;
     top: 1rem;
-    left: 10rem;
-    margin: 0;
+    left: 3.5rem;
   }
 }
 @media (max-width: 375px) {
   .restaurent .like {
-    left: 8rem;
+    left: 2.5rem;
   }
 }
 .restaurent .like .fa-heart {
@@ -719,7 +718,7 @@ main {
   margin: 1rem 1.5rem 0 2rem;
   border-radius: 1rem;
   width: 23rem;
-  height: 5rem;
+  height: 4.8rem;
   top: 4rem;
   left: 0;
   overflow: hidden;
@@ -733,7 +732,7 @@ main {
 @media (max-width: 599px) {
   .menu-card {
     width: 23rem;
-    left: 0.5rem;
+    left: 0;
     top: 0;
   }
 }
@@ -774,17 +773,26 @@ main {
   position: relative;
   top: -2.8rem;
   left: -1rem;
+  transition-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 .menu-card__confirm-icons {
   background-color: #99E2D0;
-  margin: -6.95rem -5rem -1rem 23rem;
-  width: 5rem;
+  position: relative;
+  top: -7.1rem;
+  left: 23rem;
+  width: 6rem;
   height: 5rem;
   display: flex;
   border-radius: 0 1rem 1rem 0;
   align-items: center;
   justify-content: center;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
+}
+@media (max-width: 1024px) {
+  .menu-card__confirm-icons {
+    top: -7.2rem;
+  }
 }
 .menu-card__confirm-icons__icons {
   height: 2rem;
@@ -793,29 +801,43 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 1.5rem;
   border-radius: 100px;
   transform: rotate(180deg);
-  transition-duration: 0.5s;
+  transition-duration: 1s;
 }
 .menu-card__confirm-icons .fa-check {
   color: #99E2D0;
 }
 .menu-card:hover .menu-card__confirm-icons {
   transform: translateX(-4.5rem);
-  transition-duration: 0.5s;
+}
+@media (max-width: 375px) {
+  .menu-card:hover .menu-card__confirm-icons {
+    transform: translateX(-6.5rem);
+  }
 }
 .menu-card:hover .menu-card__confirm-icons__icons {
   transform: rotate(360deg);
 }
 .menu-card:hover .menu-card__price {
-  transform: translateX(-3.8rem);
-  transition-duration: 0.5s;
+  left: -5rem;
 }
 .menu-card:hover h3 {
   width: 16rem;
 }
+@media (max-width: 375px) {
+  .menu-card:hover h3 {
+    width: 13rem;
+  }
+}
 .menu-card:hover p {
   width: 14rem;
+}
+@media (max-width: 375px) {
+  .menu-card:hover p {
+    width: 12rem;
+  }
 }
 
 .restaurent__starter {

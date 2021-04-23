@@ -75,7 +75,7 @@
   }
 
   &__order {
-    @include btn(-45rem, 30rem, 10rem, 3rem);
+    @include btn(-45rem, 28rem, 10rem, 3rem);
     // btn order little desktop
     @include for-little-desktop {
       @include btn(-20rem, 30rem, 10rem, 3rem);

@@ -468,15 +468,15 @@ main {
     width: 21.5rem;
   }
 }
-.restaurants__content figure figcaption {
+.restaurants__content figure figcaption h3 {
   position: relative;
-  top: 0;
+  top: -1.5rem;
   left: -1rem;
   font-weight: bolder;
   font-size: 1.4rem;
 }
 @media (max-width: 599px) {
-  .restaurants__content figure figcaption {
+  .restaurants__content figure figcaption h3 {
     top: 10rem;
     left: -2rem;
   }
@@ -501,12 +501,12 @@ main {
 }
 .restaurants__content figure div p {
   position: relative;
-  left: 0.6rem;
+  left: 0.7rem;
   top: -0.6rem;
 }
 .restaurants p {
   position: relative;
-  top: -1rem;
+  top: -2.5rem;
   left: 1.5rem;
   font-size: 1.1rem;
 }
@@ -525,7 +525,7 @@ main {
 }
 @media (max-width: 599px) {
   .restaurants p {
-    top: 11.8rem;
+    top: 12.2rem;
     left: 0.5rem;
   }
 }
@@ -551,6 +551,11 @@ main {
   .restaurants .fa-heart {
     top: 11.5rem;
     left: 19rem;
+  }
+}
+@media (max-width: 360px) {
+  .restaurants .fa-heart {
+    left: 18rem;
   }
 }
 .restaurants .like__bg {
@@ -610,6 +615,7 @@ main {
 .restaurent__title {
   position: absolute;
   left: 1rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   font-family: "Shrikhand", "cursive";
 }
@@ -798,7 +804,7 @@ main {
 }
 @media (max-width: 599px) {
   .menu-type {
-    margin: 4rem 0 1rem 1rem;
+    margin: 2rem 0 1rem 1rem;
     top: 0;
     left: 1rem;
   }
@@ -811,7 +817,7 @@ main {
   margin: 1rem 1.5rem 0 2rem;
   border-radius: 1rem;
   width: 23rem;
-  height: 4.8rem;
+  height: 4.6rem;
   top: 4rem;
   left: 0;
   overflow: hidden;
@@ -825,14 +831,14 @@ main {
 @media (max-width: 599px) {
   .menu-card {
     width: 23rem;
-    left: 0;
+    left: -0.45rem;
     top: 0;
   }
 }
 @media (max-width: 375px) {
   .menu-card {
     width: 21rem;
-    left: 0;
+    left: -0.25rem;
   }
 }
 .menu-card h3 {
@@ -938,6 +944,11 @@ main {
   animation-delay: 1s;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: both;
+}
+@media (max-width: 599px) {
+  .restaurent__starter {
+    margin-top: 4rem;
+  }
 }
 
 .restaurent__main-course {

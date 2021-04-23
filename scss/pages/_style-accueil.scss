@@ -292,9 +292,9 @@ main {
       }
     }
 
-    & figcaption {
+    & figcaption h3{
       position: relative;
-      top: 0;
+      top: -1.5rem;
       left: -1rem;
       font-weight: bolder;
       font-size: 1.4rem;
@@ -322,7 +322,7 @@ main {
 
       & p {
         position: relative;
-        left: 0.6rem;
+        left: 0.7rem;
         top: -0.6rem;
       }
     }
@@ -330,7 +330,7 @@ main {
 
   & p {
     position: relative;
-    top: -1rem;
+    top: -2.5rem;
     left: 1.5rem;
     font-size: 1.1rem;
     @include for-little-desktop {
@@ -343,7 +343,7 @@ main {
       top: 17rem;
     }
     @include for-phone {
-      top: 11.8rem;
+      top: 12.2rem;
       left: 0.5rem;
     }
 
@@ -365,6 +365,9 @@ main {
     @include for-phone {
       top: 11.5rem;
       left: 19rem;
+    }
+    @include for-little-little-phone {
+      left: 18rem;
     }
   }
 

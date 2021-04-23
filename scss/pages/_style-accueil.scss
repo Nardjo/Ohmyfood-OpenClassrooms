@@ -24,16 +24,19 @@ main {
   text-align: center;
   font-size: 10px;
   position: absolute;
-  top: 28%;
+  top: 20%;
   left: 48%;
   animation: loader 4s;
   animation-delay: 1.75s;
   animation-fill-mode: both;
   @include for-little-desktop {
-    top: 25%;
+    top: 20%;
   }
   @include for-tablet {
     top: 33%;
+  }
+  @include for-little-tablet {
+    top: 25%;
   }
   @include for-phone {
     top: 50%;

@@ -19,13 +19,13 @@
 }
 @keyframes loader {
   100% {
+    z-index: -10;
     opacity: 0;
-    z-index: 10;
   }
 }
 @keyframes loader-bg {
   100% {
-    opacity: 0.6;
+    opacity: 0.8;
     z-index: 10;
   }
 }
@@ -168,51 +168,31 @@ main {
   overflow: hidden;
   background: white;
   opacity: 0;
-  animation: loader-bg 3s;
+  animation: loader-bg 2s;
 }
 
 .loader {
+  z-index: 10;
   margin: 0 auto;
   width: 60px;
   height: 50px;
   text-align: center;
   font-size: 10px;
   position: absolute;
-  top: 37%;
+  top: 50%;
   left: 48%;
-  animation: loader 4s;
+  animation: loader 2s;
   animation-delay: 1.75s;
   animation-fill-mode: both;
 }
-@media (max-width: 1200px) {
-  .loader {
-    top: 20%;
-  }
-}
-@media (max-width: 768px) {
-  .loader {
-    top: 33%;
-  }
-}
-@media (max-width: 600px) {
-  .loader {
-    top: 25%;
-  }
-}
 @media (max-width: 599px) {
   .loader {
-    top: 50%;
     left: 45%;
-  }
-}
-@media (max-width: 375px) {
-  .loader {
-    top: 45%;
   }
 }
 @media (max-width: 360px) {
   .loader {
-    top: 60%;
+    left: 42%;
   }
 }
 .loader > div {

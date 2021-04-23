@@ -14,40 +14,30 @@ main {
   overflow: hidden;
   background: white;
   opacity: 0;
-  animation: loader-bg 3s;
+  animation: loader-bg 2s;
 }
 
 .loader {
+  z-index: 10;
   margin: 0 auto;
   width: 60px;
   height: 50px;
   text-align: center;
   font-size: 10px;
   position: absolute;
-  top: 37%;
+  top: 50%;
   left: 48%;
-  animation: loader 4s;
+  animation: loader 2s;
   animation-delay: 1.75s;
   animation-fill-mode: both;
-  @include for-little-desktop {
-    top: 20%;
-  }
-  @include for-tablet {
-    top: 33%;
-  }
-  @include for-little-tablet {
-    top: 25%;
-  }
+
   @include for-phone {
-    top: 50%;
     left: 45%;
   }
-  @include for-little-phone {
-    top: 45%;
-  }
   @include for-little-little-phone {
-    top: 60%;
+    left: 42%;
   }
+
 
   > div {
     height: 100%;

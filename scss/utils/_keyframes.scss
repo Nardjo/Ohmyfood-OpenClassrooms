@@ -19,14 +19,15 @@
 
 @keyframes loader {
   100% {
+    z-index: -10;
     opacity: 0;
-    z-index: 10;
+
   }
 }
 
 @keyframes loader-bg {
   100% {
-    opacity: 0.6;
+    opacity: 0.8;
     z-index: 10;
   }
 }

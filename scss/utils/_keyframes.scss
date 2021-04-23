@@ -8,3 +8,25 @@
     opacity: 100%;
   }
 }
+
+@keyframes delay {
+  0%, 40%, 100% {
+    transform: scaleY(0.05);
+  }  20% {
+       transform: scaleY(1.5);
+     }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: 10;
+  }
+}
+
+@keyframes loader-bg {
+  100% {
+    opacity: 0.6;
+    z-index: 10;
+  }
+}

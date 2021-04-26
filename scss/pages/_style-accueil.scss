@@ -316,7 +316,7 @@ main {
       background-color: $color-tertiary;
 
       @include for-phone {
-        margin-left: 29.5rem;
+        margin-left: 13.5rem;
       }
       @include for-little-phone {
         left: -14rem;

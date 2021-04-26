@@ -491,12 +491,17 @@ main {
 }
 @media (max-width: 599px) {
   .restaurants__content figure div {
-    margin-left: 13rem;
+    margin-left: 13.5rem;
   }
 }
 @media (max-width: 375px) {
   .restaurants__content figure div {
-    left: -14rem;
+    left: 2.5rem;
+  }
+}
+@media (max-width: 360px) {
+  .restaurants__content figure div {
+    left: 2rem;
   }
 }
 .restaurants__content figure div p {

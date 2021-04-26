@@ -954,6 +954,7 @@ main {
 @media (max-width: 599px) {
   .restaurent__starter {
     margin-top: 4rem;
+    width: 375px;
   }
 }
 
@@ -966,6 +967,7 @@ main {
 @media (max-width: 599px) {
   .restaurent__main-course {
     margin-left: 0;
+    width: 375px;
   }
 }
 
@@ -995,6 +997,7 @@ main {
 @media (max-width: 599px) {
   .restaurent__dessert {
     left: 0;
+    width: 375px;
   }
 }
 

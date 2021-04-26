@@ -259,6 +259,7 @@
   @include animItemApproach(1s);
   @include for-phone {
     margin-top: 4rem;
+    width: 375px;
   }
 }
 
@@ -267,6 +268,7 @@
 
   @include for-phone {
     margin-left: 0;
+    width: 375px;
   }
 }
 
@@ -286,6 +288,7 @@
   }
   @include for-phone {
     left: 0;
+    width: 375px;
   }
 }
 

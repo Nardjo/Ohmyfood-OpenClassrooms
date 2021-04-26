@@ -117,9 +117,10 @@
   }
 
   @include for-phone {
-    margin: 2rem 0 1rem 1rem;
+    margin-bottom: 2rem;
     top: 0;
-    left: 1rem;
+    left: 2rem;
+    width: 50%;
   }
 }
 
@@ -264,8 +265,6 @@
 .restaurent__main-course {
   @include animItemApproach(1.5s);
 
-  @include for-big-tablet {
-  }
   @include for-phone {
     margin-left: 0;
   }

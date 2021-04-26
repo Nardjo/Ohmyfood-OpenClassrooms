@@ -804,9 +804,10 @@ main {
 }
 @media (max-width: 599px) {
   .menu-type {
-    margin: 2rem 0 1rem 1rem;
+    margin-bottom: 2rem;
     top: 0;
-    left: 1rem;
+    left: 2rem;
+    width: 50%;
   }
 }
 

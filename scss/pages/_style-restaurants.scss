@@ -119,8 +119,11 @@
   @include for-phone {
     margin-bottom: 2rem;
     top: 0;
-    left: 2rem;
+    left: 1rem;
     width: 50%;
+  }
+  @include for-little-phone {
+    left: 1.5rem;
   }
 }
 
@@ -142,12 +145,12 @@
   }
   @include for-phone {
     width: 23rem;
-    left: -0.45rem;
+    left: -1.8rem;
     top: 0;
   }
   @include for-little-phone {
     width: 21rem;
-    left: -0.25rem;
+    left: -0.6rem;
   }
 
   // titre plat

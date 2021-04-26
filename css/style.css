@@ -806,8 +806,13 @@ main {
   .menu-type {
     margin-bottom: 2rem;
     top: 0;
-    left: 2rem;
+    left: 1rem;
     width: 50%;
+  }
+}
+@media (max-width: 375px) {
+  .menu-type {
+    left: 1.5rem;
   }
 }
 
@@ -832,14 +837,14 @@ main {
 @media (max-width: 599px) {
   .menu-card {
     width: 23rem;
-    left: -0.45rem;
+    left: -1.8rem;
     top: 0;
   }
 }
 @media (max-width: 375px) {
   .menu-card {
     width: 21rem;
-    left: -0.25rem;
+    left: -0.6rem;
   }
 }
 .menu-card h3 {

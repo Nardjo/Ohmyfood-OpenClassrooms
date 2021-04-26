@@ -491,7 +491,7 @@ main {
 }
 @media (max-width: 599px) {
   .restaurants__content figure div {
-    left: -14rem;
+    margin-left: 29.5rem;
   }
 }
 @media (max-width: 375px) {
@@ -681,7 +681,7 @@ main {
 .restaurent__order {
   position: relative;
   left: -45rem;
-  top: 30rem;
+  top: 28rem;
   width: 10rem;
   height: 3rem;
   border-radius: 3rem;
@@ -904,6 +904,11 @@ main {
   border-radius: 100px;
   transform: rotate(180deg);
   transition-duration: 1s;
+}
+@media (max-width: 599px) {
+  .menu-card__confirm-icons__icons {
+    margin-top: 0.5rem;
+  }
 }
 .menu-card__confirm-icons .fa-check {
   color: #99E2D0;

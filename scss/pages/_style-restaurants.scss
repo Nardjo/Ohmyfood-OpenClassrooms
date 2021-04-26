@@ -1,4 +1,5 @@
 
+// main
 .restaurent {
   display: flex;
   flex-flow: row nowrap;
@@ -31,6 +32,7 @@
     max-width: 375px;
   }
 
+  // titre restaurent
   &__title {
     position: absolute;
     left: 1rem ;
@@ -43,6 +45,7 @@
     }
   }
 
+  // like restaurent
   & .like {
     position: absolute;
     top: 1.5rem;
@@ -74,6 +77,7 @@
     @include like;
   }
 
+  // bouton
   &__order {
     @include btn(-45rem, 28rem, 10rem, 3rem);
     // btn order little desktop
@@ -95,6 +99,7 @@
   }
 }
 
+// entrée-plat-dessert
 .menu-type {
   position: relative;
   top: 4rem;
@@ -118,6 +123,7 @@
   }
 }
 
+// Card menu
 .menu-card {
   position: relative;
   background-color: #FFFFFF;
@@ -143,7 +149,7 @@
     left: -0.25rem;
   }
 
-
+  // titre plat
   & h3 {
     position: relative;
     top: 0;
@@ -154,6 +160,7 @@
     text-overflow: ellipsis;
   }
 
+  // description plat
   & p {
     position: relative;
     top: -0.8rem;
@@ -169,6 +176,7 @@
     }
   }
 
+  // prix du plat
   &__price {
     display: flex;
     justify-content: flex-end;
@@ -180,6 +188,7 @@
     animation-timing-function: ease-in-out;
   }
 
+  // Coche plat
   &__confirm-icons {
     background-color: $color-tertiary;
     position: relative;
@@ -206,12 +215,16 @@
       border-radius: 100px;
       transform: rotate(180deg);
       transition-duration: 1s;
+      @include for-phone {
+        margin-top: 0.5rem;
+      }
     }
     & .fa-check{
       color: $color-tertiary;
     }
   }
 
+  // animation plat
   &:hover {
     & .menu-card__confirm-icons {
       transform: translateX(-4.5rem);
@@ -240,6 +253,7 @@
   }
 }
 
+// animation menu
 .restaurent__starter {
   @include animItemApproach(1s);
   @include for-phone {

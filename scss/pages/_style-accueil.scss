@@ -4,7 +4,6 @@ main {
 }
 
 // ---------  loading spinner ------------
-
 .loader__custom {
   content: "";
   position: absolute;
@@ -250,6 +249,7 @@ main {
     }
   }
 
+  // Card restaurents
   &__content {
     background-color: #FFFFFF;
     width: 40rem;
@@ -269,7 +269,7 @@ main {
       left: 0;
     }
   }
-
+  // images cartes restaurents
   &__content figure {
     & img {
       object-fit: cover;
@@ -292,6 +292,7 @@ main {
       }
     }
 
+    // titres cartes restaurents
     & figcaption h3{
       position: relative;
       top: -1.5rem;
@@ -305,6 +306,7 @@ main {
       }
     }
 
+    // New restaurents
     & div {
       position: absolute;
       margin-left: 30rem;
@@ -314,7 +316,7 @@ main {
       background-color: $color-tertiary;
 
       @include for-phone {
-        left: -14rem;
+        margin-left: 29.5rem;
       }
       @include for-little-phone {
         left: -14rem;
@@ -328,6 +330,7 @@ main {
     }
   }
 
+  // place restaurents
   & p {
     position: relative;
     top: -2.5rem;
@@ -349,6 +352,7 @@ main {
 
   }
 
+  // like restaurents
   .fa-heart {
     position: absolute;
     top: 16.5rem;

@@ -1,3 +1,4 @@
+// ---------- bouton ----------
 @mixin btn($left, $top, $width, $height) {
   position: relative;
   left: $left;
@@ -19,6 +20,7 @@
     }
   }
 
+// ---------- like ----------
 @mixin like {
     &__bg {
       opacity: 0;
@@ -40,6 +42,8 @@
     }
   }
 
+
+// ---------- animation card restaurents ----------
 @mixin animItemApproach ($animation-delay){
   animation: itemApproach 2s;
   animation-delay: $animation-delay;
@@ -47,6 +51,7 @@
   animation-fill-mode: both;
 }
 
+// ---------- Responsive ----------
 @mixin for-little-little-phone {
   @media (max-width: 360px) {
     @content;

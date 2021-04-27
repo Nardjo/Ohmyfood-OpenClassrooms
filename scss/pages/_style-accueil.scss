@@ -2,7 +2,6 @@
 main {
   margin: 0;
 }
-
 // ---------  loading spinner ------------
 .loader__custom {
   content: "";
@@ -77,18 +76,34 @@ main {
   text-align: center;
   background-color: #fafafa;
   position: relative;
-  padding: 0 0 2rem 0;
+  padding: 1rem 0 2rem 0;
 
   &__place {
+    position: relative;
+    top: -1rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    background-color: $bg-color-primary;
+    background: $bg-color-primary;
+    padding: 2rem 0 1rem 0;
 
     &__icons {
       position: relative;
-      top: 1rem;
+      top: -0.5rem;
       margin-right: 1rem;
+    }
+
+    &__name {
+      position: relative;
+      top: -0.5rem;
+      background: transparent;
+      border: 0;
+
+      &::placeholder{
+        color: black;
+        font-size: 1rem;
+      }
+
     }
   }
 

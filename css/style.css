@@ -19,7 +19,7 @@
 }
 @keyframes loader {
   100% {
-    z-index: -10;
+    z-index: -20;
     opacity: 0;
   }
 }
@@ -231,18 +231,31 @@ main {
   text-align: center;
   background-color: #fafafa;
   position: relative;
-  padding: 0 0 2rem 0;
+  padding: 1rem 0 2rem 0;
 }
 .explore__place {
+  position: relative;
+  top: -1rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  background-color: #f3f3f3;
+  background: #f3f3f3;
+  padding: 2rem 0 1rem 0;
 }
 .explore__place__icons {
   position: relative;
-  top: 1rem;
+  top: -0.5rem;
   margin-right: 1rem;
+}
+.explore__place__name {
+  position: relative;
+  top: -0.5rem;
+  background: transparent;
+  border: 0;
+}
+.explore__place__name::placeholder {
+  color: black;
+  font-size: 1rem;
 }
 .explore__title {
   display: flex;

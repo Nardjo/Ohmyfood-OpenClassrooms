@@ -2,6 +2,7 @@
 main {
   margin: 0;
 }
+
 // ---------  loading spinner ------------
 .loader__custom {
   content: "";
@@ -47,24 +48,29 @@ main {
   }
 
   .bar1 {
-    background-color: $color-primary ;
+    background-color: $color-primary;
   }
+
   .bar2 {
     background-color: $color-secondary;
     animation-delay: -0.7s;
   }
+
   .bar3 {
     background-color: $color-tertiary;
     animation-delay: -0.6s;
   }
+
   .bar4 {
     background-color: $color-primary;
     animation-delay: -0.5s;
   }
+
   .bar5 {
     background-color: $color-secondary;
     animation-delay: -0.4s;
   }
+
   .bar6 {
     background-color: $color-tertiary;
     animation-delay: -0.3s;
@@ -99,11 +105,15 @@ main {
       background: transparent;
       border: 0;
 
-      &::placeholder{
+      &::placeholder {
         color: black;
         font-size: 1rem;
       }
 
+      &:focus {
+        outline: inherit;
+        font-size: 1rem;
+      }
     }
   }
 
@@ -284,6 +294,7 @@ main {
       left: 0;
     }
   }
+
   // images cartes restaurents
   &__content figure {
     & img {
@@ -308,7 +319,7 @@ main {
     }
 
     // titres cartes restaurents
-    & figcaption h3{
+    & figcaption h3 {
       position: relative;
       top: -1.5rem;
       left: -1rem;

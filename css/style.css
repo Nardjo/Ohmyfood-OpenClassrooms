@@ -257,6 +257,10 @@ main {
   color: black;
   font-size: 1rem;
 }
+.explore__place__name:focus {
+  outline: inherit;
+  font-size: 1rem;
+}
 .explore__title {
   display: flex;
   justify-content: center;

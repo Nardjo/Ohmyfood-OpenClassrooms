@@ -107,12 +107,11 @@ main {
 
       &::placeholder {
         color: black;
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
 
       &:focus {
-        outline: inherit;
-        font-size: 1rem;
+        outline: none;
       }
     }
   }

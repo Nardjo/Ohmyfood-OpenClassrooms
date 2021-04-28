@@ -1,5 +1,6 @@
+Projet 3 de la formation développeur web chez Openclassrooms.
 
-Scénario  
+**Scénario**  
 
 Vous venez d’être recruté chez Ohmyfood!, en tant que développeur junior. Félicitations !
 

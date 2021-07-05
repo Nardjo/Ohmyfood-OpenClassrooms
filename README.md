@@ -1,6 +1,6 @@
 Projet 3 de la formation développeur web chez Openclassrooms.
 
-**Scénario**  
+# Scénario
 
 Vous venez d’être recruté chez Ohmyfood!, en tant que développeur junior. Félicitations !
 
@@ -28,7 +28,12 @@ Vous trouvez les maquettes du site dans votre boîte mail, envoyées par Fanny.
 Vous avez désormais tous les éléments pour construire ce site mobile. Vous vous lancez dans cette nouvelle aventure!
 
 ------------------------------------------------------------------------
-**Compétences évaluées**
+# Livrables
+- Le lien vers un dépôt Git public contenant le code de l'application web.
+Le mentor et l'évaluateur doivent être en mesure de cloner le référentiel, d'ouvrir index.html, d'utiliser l'application entièrement opérationnelle et de confirmer que n’importe quel input utilisateur est validé.
+- Un plan de tests.
+
+# Compétences évaluées
 
 - Mettre en œuvre des effets CSS graphiques avancés
 - Mettre en place une structure de navigation pour un site web
